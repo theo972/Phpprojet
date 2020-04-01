@@ -84,4 +84,26 @@
     border-right: groove;
     
 }
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+
+.footer a {
+    font: 12px 'agipo_regular',Helvetica,Arial,sans-serif;
+    flex-direction: row;
+    font-size: 9pt;
+    align-content: flex-start;
+    margin-right: 35px;
+    text-decoration: none;
+    color: #817D7C;
+}
+
+.push {
+    margin-left: auto;
+}
 
