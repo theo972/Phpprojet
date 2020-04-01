@@ -1,0 +1,87 @@
+
+
+.menu{
+     display: flex;
+     align-items: center;
+     justify-content: space-around ;
+     flex-direction :row;
+     background-color: rgba(128, 128, 128, 0.596);
+     padding-top: 2%;
+     padding-bottom: 4%;
+     
+     
+ 
+ }
+ 
+ .cara{
+     font-family : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     color: rgb(24,24,24);
+     opacity: 60%;
+     text-decoration: none;
+ 
+ }
+
+ #sto{
+     padding-top: 5%;
+     
+     background-color: rgb(139, 139, 139);
+     padding-bottom: 20%;
+    
+    
+ }
+ .title{
+    padding-left: 10%;
+ }
+
+#Algorithme{
+    padding-top: 5%;
+    
+    background-color: rgba(97, 96, 96, 0.191);
+    padding-bottom: 40%;
+}
+
+#BDD{
+    padding-top: 5%;
+   
+    background-color: rgb(139, 139, 139);
+    padding-bottom: 40%;
+}
+
+#Laposte{
+    padding-top: 5%;
+    
+    background-color: rgba(97, 96, 96, 0.191);
+    padding-bottom: 40%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+
+.stor{
+    padding-left: 10%;
+    padding-right: 20%;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.exo1{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#story{
+    width: 50%;
+    border-right: groove;
+    
+    
+}
+
+ 
+#zubi{
+    padding-left: 5%;
+    width: 10%;
+    border-right: groove;
+    
+}
+
