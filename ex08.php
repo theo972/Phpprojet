@@ -48,7 +48,7 @@
 
 				<form method="POST" action="#">
 					<?php
-						require "ex07/convertIntToHex.php";
+						require "ex08/convertIntToHex.php";
 
 						$form = new convertIntToHex();
 						$form->getInputText("number","Number");
