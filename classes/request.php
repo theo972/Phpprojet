@@ -42,7 +42,7 @@ class request
 			if ($this->_bdd === null) {
 				$dsn = $this->_dbType . ':dbname=' . $this->_dbName . ';host=' . $this->_dbAdress;
 				$this->_bdd = new PDO($dsn, $this->_user, $this->_pwd);
-				echo "CONNEXION STARTED<br>";	
+				//echo "CONNEXION STARTED<br>";	
 			}
 			else {
 				echo "Connexion already done (debug message from request.php)";
@@ -58,12 +58,21 @@ class request
 	* 
 	*
 	*/
-	public function getAllRows($table, $columns) {
-		$req = "SELECT " . $columns . "FROM " . $table;
+	public function getUserRows($table, $columns) {
+		$req = "SELECT " . $columns . " FROM " . $table;
+		//echo $req;
 		$tab = $this->_bdd->query($req);
+		$col = "blue";
 		foreach ($tab as $row) {
-			print_r($row['name'] . " " . $row['specie'] . " " . $row['life']);
-			echo "<br>";
+			/*print_r($row['Name'] . " " . $row['First_Name'] . " " . $row['Birth_Date'] . " " . $row['Mail_Adress'] . " " . $row["Gender"] . " " . $row["Postal_Adress"] . " " . $row['Sign_DateTime']);
+			echo "<br>";*/
+			if ($col ==  "white") {
+				$col = "#BBBBFF";
+			} else {
+				$col = "white";
+			}
+			echo "<tr style= background-color:" . $col . "><td>" . 
+			$row['Name'] . "</td><td>" . $row['First_Name'] . "</td><td>" . $row['Birth_Date'] . "</td><td>" . $row['Mail_Adress'] . "</td><td>" . $row['Gender'] . "</td><td>" . $row['Postal_Adress'] . "</td><td>" . $row['Sign_DateTime'] . "</td></tr>";
 		}
 	}
 
@@ -80,7 +89,7 @@ class request
 
 
 
-	public function setTrex($trex) {
+	/*public function setTrex($trex) {
 		$req = "INSERT INTO dinosaurs (name, type, length, health, damage, gender, size_arm, nbr_arm) VALUES ('" . $trex->getName() . "', 'T-Rex', " . $trex->getlength() . ", " . $trex->getHealth() . ", " . $trex->getDamage() . ", '" . $trex->getGender() . "', " . $trex->getSizeArms() . ", " . $trex->getNbrArms() . ")";
 		echo $req;
 		try {
@@ -88,7 +97,7 @@ class request
 		} catch (PDOException $e) {
 			echo "Can't add the trex !";
 		}
-	}
+	}*/
 }
 
 ?>
