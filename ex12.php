@@ -51,6 +51,7 @@
 						require "classes/autoform.php";
 						require "classes/user.php";
 						require "classes/request.php";
+						require "classes/functions_backlog.php";
 						$form = new autoform();
 	                    $form->getInputText("name","Name");
 	                    $form->getInputText("firstName","First Name");
@@ -61,7 +62,8 @@
 	                    $form->getInputText("postalAdress","Postal Adress");
 	                    $form->getInputSubmit("submit","Submit");
 	                    echo "</br>";
-                        if(!empty($_POST)){
+                        if(!empty($_POST) && controlMail($_POST["mail"]) === true){
+
                         	$user = new user($_POST["name"], $_POST["firstName"], $_POST["birthDate"], $_POST["mail"], $_POST["gender"], $_POST["postalAdress"]);
                         	echo $user->getName() . " ";
                         	echo $user->getFirstName(). " ";
