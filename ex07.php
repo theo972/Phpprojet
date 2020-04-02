@@ -1,3 +1,9 @@
+<?php
+
+require_once 'classes/functions_backlog.php';
+require 'classes/autoform_p.php';
+
+?>
 <html lang="fr">
     <head>
     <link rel="stylesheet" href="php.css">
@@ -19,21 +25,37 @@
             </header>
             <body>
 
-
             <form method="POST" action="#">
-					<?php
-						require "ex06/convertIntToRom.php";
+            <?php
 
-						$form = new convertIntToRom();
-						$form->getInputText("number","Number");
-	                    $form->getInputSubmit("submit","Submit");
-	                    echo "</br>";
 
-                        if(!empty($_POST)){
-                        	$form->checking($_POST["number"]);
-                    	}
-					?>	
-				</form>
+                $form = new autoform();
+                $form->getInputNumber("number", "Fonction factorielle");
+                $form->getInputSubmit("Valider");
+
+
+
+
+            ?>
+            </form>
+
+
+            <?php
+
+
+
+            if (!empty($_POST)){
+
+                
+                fact($_POST["number"]);
+                
+
+            }
+
+
+            ?>
+
+
 
 
 

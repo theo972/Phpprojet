@@ -1,3 +1,4 @@
+
 <html lang="fr">
     <head>
     <link rel="stylesheet" href="php.css">
@@ -17,9 +18,7 @@
                         <p>
                             <a href="#Algorithme" class="cara">Algorithme</a>
                         </p>
-                        <p>
-                            <a href="#BDD" class="cara">Base de donnée</a> </p>
-                        <p>
+                       <p>
                             <a href="#Laposte" class="cara">La poste</a>
                         </p>
                     </div>
@@ -44,7 +43,7 @@
                     </p>
                     </div>
                     <div id = "zubi">
-                      <p>Fait ou pas fait</p>
+                      <p>Fait </p>
                     </div>
                 </div>
                 <hr>
@@ -59,7 +58,7 @@
                     </p>
                     </div>
                     <div id = "zubi">
-                      <p>Fait ou pas fait</p>
+                      <p>Fait </p>
                     </div>
                 </div>
                 <hr>
@@ -72,7 +71,7 @@
                     </p>
                     </div>
                     <div id = "zubi">
-                      <p>Fait ou pas fait</p>
+                      <p>Fait </p>
                     </div>
                 </div>
                 <hr>
@@ -86,7 +85,7 @@
                     </p>
                     </div>
                     <div id = "zubi">
-                      <p>Fait ou pas fait</p>
+                      <p>Fait </p>
                     </div>
                 </div>
                 <hr>
@@ -99,7 +98,7 @@
                     </p>
                     </div>
                     <div id = "zubi">
-                      <p>Fait ou pas fait</p>
+                      <p>Fait </p>
                     </div>
                 </div>
                 <hr>
@@ -111,7 +110,7 @@
                         Afin de connaitre sa valeur en chiffre Romain</p>
                     </div>
                     <div id = "zubi">
-                      <p>Fait ou pas fait</p>
+                      <p>Fait</p>
                     </div>
                 </div>
                 <hr>
@@ -124,7 +123,7 @@
                     </p>
                     </div>
                     <div id = "zubi">
-                      <p>Fait ou pas fait</p>
+                      <p>Fait</p>
                     </div>
                 </div>
                 <hr>
@@ -137,7 +136,7 @@
                     </p>
                     </div>
                     <div id = "zubi">
-                      <p>Fait ou pas fait</p>
+                      <p>Fait</p>
                     </div>
                 </div>
                 <hr>
@@ -150,7 +149,7 @@
                     </p>
                     </div>
                     <div id = "zubi">
-                      <p>Fait ou pas fait</p>
+                      <p>Fait</p>
                     </div>
                 </div>
                 <hr>
@@ -163,7 +162,7 @@
                     </p>
                     </div>
                     <div id = "zubi">
-                      <p>Fait ou pas fait</p>
+                      <p>Fait</p>
                     </div>
                 </div>
                 <hr>
@@ -176,7 +175,7 @@
                     </p>
                     </div>
                     <div id = "zubi">
-                      <p>Fait ou pas fait</p>
+                      <p>pas fait</p>
                     </div>
                 </div>
                 <hr>
@@ -189,7 +188,7 @@
                     </p>
                     </div>
                     <div id = "zubi">
-                      <p>Fait ou pas fait</p>
+                      <p>Fait</p>
                     </div>
                 </div>
                 <hr>
@@ -202,7 +201,7 @@
                     </p>
                     </div>
                     <div id = "zubi">
-                      <p>Fait ou pas fait</p>
+                      <p>Fait</p>
                     </div>
                 </div>
                 <hr>
@@ -256,44 +255,46 @@
                 </div>
                 <hr>
                 <div class ="exo1">
-                    <h5>Exercice 1</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     Nunc bibendum lectus ac pellentesque viverra. In sit amet facilisis tortor.
-                      Etiam venenatis odio a ipsum aliquam ultricies. Integer quis purus erat. Nullam 
-                      pretium convallis eros, vel scelerisque nisi feugiat ut. Duis vitae augue ultrices, 
-                      ultricies ex sit amet, venenatis tortor. Aenean in pharetra sem. Quisque euismod 
-                      fringilla vehicula. Curabitur tristique orci vel lacus blandit molestie. Suspendisse 
-                      aliquet nibh a egestas gravida. Nullam quis massa gravida, consectetur ipsum a, 
-                      laoreet nunc. Vestibulum molestie arcu mi, sit amet mollis orci gravida eget. 
-                      Fusce id velit mollis, faucibus lectus nec, sagittis lorem. Fusce imperdiet 
-                      dui dolor, ut dictum lectus elementum et. Ut non luctus ipsum. Vestibulum 
-                      rhoncus sed dui at elementum.</p>
-                </div>
-                <hr>
-            </div>
-
-            <div id="BDD">
-                <div class="title">
-                    <h1>Base de donnée</h1>
-                    <p>Voici la page de la base de donnée.</p>
+                    <h5>Algorithme : US3</h5>
+                    <a type="button" href="ex03.php" target="_blank">Nombre premier</a>
                 </div>
                 <hr>
                 <div class ="exo1">
-                    <h5>Exercice 1</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     Nunc bibendum lectus ac pellentesque viverra. In sit amet facilisis tortor.
-                      Etiam venenatis odio a ipsum aliquam ultricies. Integer quis purus erat. Nullam 
-                      pretium convallis eros, vel scelerisque nisi feugiat ut. Duis vitae augue ultrices, 
-                      ultricies ex sit amet, venenatis tortor. Aenean in pharetra sem. Quisque euismod 
-                      fringilla vehicula. Curabitur tristique orci vel lacus blandit molestie. Suspendisse 
-                      aliquet nibh a egestas gravida. Nullam quis massa gravida, consectetur ipsum a, 
-                      laoreet nunc. Vestibulum molestie arcu mi, sit amet mollis orci gravida eget. 
-                      Fusce id velit mollis, faucibus lectus nec, sagittis lorem. Fusce imperdiet 
-                      dui dolor, ut dictum lectus elementum et. Ut non luctus ipsum. Vestibulum 
-                      rhoncus sed dui at elementum.</p>
+                    <h5>Algorithme : US4</h5>
+                    <a type="button" href="ex04.php" target="_blank">Nombre de seconde<a>
                 </div>
                 <hr>
-            </div>
+                <div class ="exo1">
+                    <h5>Algorithme : US5</h5>
+                    <a type="button" href="ex05.php" target="_blank">Nombre Mini - Maxi</a>
+                </div>
+                <hr>
+                <div class ="exo1">
+                    <h5>Algorithme : US6</h5>
+                    <a type="button" href="ex06.php" target="_blank">Chiffre Romain</a>
+                </div>
+                <hr>
+                <div class ="exo1">
+                    <h5>Algorithme : US7</h5>
+                    <a type="button" href="ex07.php" target="_blank">Factorielle</a>
+                </div>
+                <hr>
+                <div class ="exo1">
+                    <h5>Algorithme : US8</h5>
+                    <a type="button" href="ex08.php" target="_blank">Hexadecimale</a>
+                </div>
+                <hr>
+                <div class ="exo1">
+                    <h5>Algorithme : US9</h5>
+                    <a type="button" href="ex09.php" target="_blank">Binaire</a>
+                </div>
+                <hr>
+                <div class ="exo1">
+                    <h5>Algorithme : US10</h5>
+                    <a type="button" href="ex10.php" target="_blank">Formulaire regex</a>
+                </div>
+                <hr>
+             
 
             <div id="Laposte">
                 <div class="title">

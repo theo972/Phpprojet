@@ -10,30 +10,52 @@
         <body>
             <header>
                 <nav>
-                <div class="menu">
+                    <div class="menu">
                         <p>
-                        <a href="index.php" class="cara">Retourner a la page d'accueil</a>
+                            <a href="index.php" class="cara">Retourner a la page d'accueil</a>
                         </p>
                     </div>
                 </nav>
             </header>
             <body>
+    
+    <div id ="exo3">
+    <form method="POST" action="#">
+    <?php
+        
+        require "classes/autoform.php";
+        $form = new autoform();
+        $form->getInputText("nombre1","Premier nombre");
+        $form->getInputSubmit("submit","Submit");
+	    
+    ?>
+    </form>
+    </div>
+
+    <?php
+
+    $a = 2;
+
+    if(!empty($_POST)){
+        echo $_POST["nombre1"];
+        
+
+        while($_POST["nombre1"] > $a % 2){
+            if($_POST["nombre1"] % $a == 0){
+                break;
+            }
+            $a++;
+        }
+        if($a > $_POST["nombre1"] / 2){
+            echo " le nombre est premier";
+        }else{
+            echo " le nombre n'est pas premier";
+        }
+    }
+
+    ?>
 
 
-            <form method="POST" action="#">
-					<?php
-						require "ex06/convertIntToRom.php";
-
-						$form = new convertIntToRom();
-						$form->getInputText("number","Number");
-	                    $form->getInputSubmit("submit","Submit");
-	                    echo "</br>";
-
-                        if(!empty($_POST)){
-                        	$form->checking($_POST["number"]);
-                    	}
-					?>	
-				</form>
 
 
 
