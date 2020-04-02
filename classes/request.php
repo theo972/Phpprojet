@@ -62,9 +62,17 @@ class request
 		$req = "SELECT " . $columns . " FROM " . $table;
 		//echo $req;
 		$tab = $this->_bdd->query($req);
+		$col = "blue";
 		foreach ($tab as $row) {
-			print_r($row['Name'] . " " . $row['First_Name'] . " " . $row['Birth_Date'] . " " . $row['Mail_Adress'] . " " . $row["Gender"] . " " . $row["Postal_Adress"] . " " . $row['Sign_DateTime']);
-			echo "<br>";
+			/*print_r($row['Name'] . " " . $row['First_Name'] . " " . $row['Birth_Date'] . " " . $row['Mail_Adress'] . " " . $row["Gender"] . " " . $row["Postal_Adress"] . " " . $row['Sign_DateTime']);
+			echo "<br>";*/
+			if ($col ==  "white") {
+				$col = "#BBBBFF";
+			} else {
+				$col = "white";
+			}
+			echo "<tr style= background-color:" . $col . "><td>" . 
+			$row['Name'] . "</td><td>" . $row['First_Name'] . "</td><td>" . $row['Birth_Date'] . "</td><td>" . $row['Mail_Adress'] . "</td><td>" . $row['Gender'] . "</td><td>" . $row['Postal_Adress'] . "</td><td>" . $row['Sign_DateTime'] . "</td></tr>";
 		}
 	}
 
