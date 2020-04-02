@@ -108,16 +108,3 @@
     margin-left: auto;
 }
 
-
-
-
-.bddpage{
-    display: flex;
-    align-items: center;
-    justify-content: space-around ;
-    flex-direction :row;
-    background-color: rgba(199, 198, 198, 0.596);
-   
-    
-}
-

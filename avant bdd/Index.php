@@ -294,26 +294,9 @@
                     <a type="button" href="ex10.php" target="_blank">Formulaire regex</a>
                 </div>
                 <hr>
-                <div class ="exo1">
-                    <h5>Algorithme : US12</h5>
-                    <a type="button" href="ex11.php" target="_blank">Formulaire regex</a>
-                </div>
-                <hr>
-                <div id="Laposte">
-                <div class="title">
-                    <h1>Base de donnée</h1>
-                    <p>Voici un accés a une page base de donnée</p>
-                </div>
-                <hr>
-                <div class ="exo1">
-                    <h5>Base de donnée</h5>
-                    <a type="button" href="BDD.php" target="_blank">Page base de donnée</a>
-                </div>
-                <hr>
-                
              
 
-            <div id="BDD">
+            <div id="Laposte">
                 <div class="title">
                     <h1>La poste</h1>
                     <p>Voici la page de la poste.</p>
