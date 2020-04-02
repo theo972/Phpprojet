@@ -19,25 +19,27 @@
             </header>
             <body>
 
+			<section>
+		<div class="test">
+			<div id="Exercices" class="text">
 
-            <form method="POST" action="#">
-			<form method="POST" action="#">
+				<form method="POST" action="#">
 					<?php
 						require "classes/autoform.php";
 						require "classes/user.php";
 						require "classes/request.php";
-						require "classes/functions_backlog.php";
+
 						$form = new autoform();
-	                    $form->getInputText("name","Name");
+	                    $form->getInputText("name", "Name");
 	                    $form->getInputText("firstName","First Name");
 	                    $form->getInputDate("birthDate","BirthDate");
 	                    $form->getInputText("mail","Mail Adress");
 						$arr = array("M", "F");
-	                    $form->getUnputTypeList("gender", $arr);
+	                    $form->getInputTypeList("gender", $arr);
 	                    $form->getInputText("postalAdress","Postal Adress");
 	                    $form->getInputSubmit("submit","Submit");
 	                    echo "</br>";
-                        if(!empty($_POST) && controlMail($_POST["mail"]) === true){
+                        if(!empty($_POST)){
 
                         	$user = new user($_POST["name"], $_POST["firstName"], $_POST["birthDate"], $_POST["mail"], $_POST["gender"], $_POST["postalAdress"]);
                         	echo $user->getName() . " ";
@@ -47,11 +49,12 @@
                         	echo $user->getGender(). " ";
                         	echo $user->getPostalAdress(). " ";
 	                    	echo "<br>";
-	                    	$dbh = new request("root", "root", "test", "mysql", "localhost");
+	                    	$dbh = new request("root", "root", "contacts", "mysql", "localhost");
 	                    	$dbh->setUser($user);
                     	}
 					?>
 				</form>
+	</section>
 
 
 

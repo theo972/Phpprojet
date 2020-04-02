@@ -18,10 +18,7 @@
                 </nav>
             </header>
             <body>
-
-            <section>
-		<div>
-			<table>
+            <table>
                 <tr>
                     <th>Name</th>
                     <th>First Name</th>
@@ -31,20 +28,19 @@
                     <th>Postal Adress</th>
                     <th>Register Datetime</th>
                 </tr>
-                <?php 
+
+                <?php
+
                 require "classes/autoform.php";
 				require "classes/user.php";
 				require "classes/request.php";
 
-                $dbh = new request("root", "root", "test", "mysql", "localhost");
+                $dbh = new request("root", "root", "contacts", "mysql", "localhost");
                 $dbh->getUserRows("users" , "Name, First_Name, Birth_Date, Mail_Adress, Gender, Postal_Adress, Sign_DateTime ");
 
                 ?>
 
             </table>
-			
-		</div>
-	</section>
 
 
 

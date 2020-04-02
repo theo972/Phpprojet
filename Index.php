@@ -295,8 +295,8 @@
                 </div>
                 <hr>
                 <div class ="exo1">
-                    <h5>Algorithme : US12</h5>
-                    <a type="button" href="ex11.php" target="_blank">Formulaire regex</a>
+                    <h5>Algorithme : US11</h5>
+                    <a type="button" href="ex11.php" target="_blank">Prenom trier</a>
                 </div>
                 <hr>
                 <div id="Laposte">
@@ -307,7 +307,7 @@
                 <hr>
                 <div class ="exo1">
                     <h5>Base de donnée</h5>
-                    <a type="button" href="BDD.php" target="_blank">Page base de donnée</a>
+                    <a type="button" href="BDD.php" target="_blank">Page base de</a>
                 </div>
                 <hr>
                 
