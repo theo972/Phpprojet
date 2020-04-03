@@ -55,7 +55,7 @@ class request
 	}
 
 	/**
-	* 
+	* Print every rows compatible of specified columns from the specified table
 	*
 	*/
 	public function getAllRows($table, $columns) {
@@ -67,6 +67,9 @@ class request
 		}
 	}
 
+	/**
+	* INSERT a new user into the database, on the users table
+	*/
 	public function setUser($user) {
 		$req = "INSERT INTO users (Name, First_Name, Birth_Date, Mail_Adress, Gender, Postal_Adress, Sign_DateTime) VALUES ('" . $user->getName() . "', '" . $user->getFirstName() . "', '" . $user->getBirthDate() . "', '" . $user->getMail() . "', '" . $user->getGender() . "', '" . $user->getPostalAdress() . "', NOW() )";
 		echo $req;
@@ -77,6 +80,9 @@ class request
 		}
 	}
 
+	/**
+	* Update the infos of the user with all the specified infos (by ID)
+	*/
 	public function updateUser($user, $id) {
 		$req = "UPDATE users SET Name = '" . $user->getName() . "', First_Name = '" . $user->getFirstName() . "', Birth_Date = '" . $user->getBirthDate() . "', Mail_Adress = '" . $user->getMail() . "', Gender = '" . $user->getGender() . "'  WHERE ID = " . $id;
 		try {
@@ -86,16 +92,30 @@ class request
 		}
 	}
 
+	/**
+	* displays the infos of the user with alternating the bakcground colors
+	*/
 	public function getUserRows($table, $columns) {
-        $req = "SELECT " . $columns . " FROM " . $table;
-        echo $req;
-        $tab = $this->_bdd->query($req);
-        foreach ($tab as $row) {
-            print_r($row['Name'] . " " . $row['First_Name'] . " " . $row['Birth_Date'] . " " . $row['Mail_Adress'] . " " . $row["Gender"] . " " . $row["Postal_Adress"] . " " . $row['Sign_DateTime']);
-            echo "<br>";
-        }
-    }
+		$req = "SELECT " . $columns . " FROM " . $table;
+		//echo $req;
+		$tab = $this->_bdd->query($req);
+		$col = "blue";
+		foreach ($tab as $row) {
+			/*print_r($row['Name'] . " " . $row['First_Name'] . " " . $row['Birth_Date'] . " " . $row['Mail_Adress'] . " " . $row["Gender"] . " " . $row["Postal_Adress"] . " " . $row['Sign_DateTime']);
+			echo "<br>";*/
+			if ($col ==  "white") {
+				$col = "#BBBBFF";
+			} else {
+				$col = "white";
+			}
+			echo "<tr style= background-color:" . $col . "><td>" . 
+			$row['Name'] . "</td><td>" . $row['First_Name'] . "</td><td>" . $row['Birth_Date'] . "</td><td>" . $row['Mail_Adress'] . "</td><td>" . $row['Gender'] . "</td><td>" . $row['Postal_Adress'] . "</td><td>" . $row['Sign_DateTime'] . "</td></tr>";
+		}
+	}
 
+	/**
+	* Return a list of every lines from the request
+	*/
     public function getCol($table, $columns) {
     	$list = array();
     	$req = "SELECT " . $columns . " FROM " . $table;
@@ -107,6 +127,9 @@ class request
         return $list;
     }
 
+    /**
+    * Return a list of user's infos row compatible with the SQL request  
+    */
     public function getChoice($table, $name, $firstName) {
     	$list = array();
     	$req = "SELECT * FROM users WHERE Name = '" . $name . "' AND First_Name = '" . $firstName . "'";

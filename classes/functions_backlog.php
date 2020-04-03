@@ -1,5 +1,8 @@
 <?php
 
+/**
+* Displays the date backwards since how many seconds passed from now
+*/
 function dateModifier($number){
 
 	$date = new DateTime("now", new DateTimeZone('Europe/Paris'));
@@ -7,6 +10,10 @@ function dateModifier($number){
 	echo "<p>The event took place the ".date('d F Y', $today)."</p>";
 }
 
+
+/**
+* Calculate the factorial number of the specified number
+*/
 function fact($number){
     
     $facto = 1;
@@ -18,7 +25,9 @@ function fact($number){
 	echo "<p>The result is ".$facto."</p>";
 }
 
-
+/**
+* Regex check to verify if the mail is well writed
+*/
 function controlMail($mail){
 
 	if ( preg_match ( " /^[^\W][a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\@[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.[a-zA-Z]{2,4}$/ " , $mail)){
@@ -29,6 +38,9 @@ function controlMail($mail){
 	}
 }
 
+/**
+* Regex check to verify if the Date is well writed
+*/
 function controlDate($date){
 
 	if ( preg_match ( " /^[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}$/ " , $date)){
@@ -40,6 +52,9 @@ function controlDate($date){
 	}
 }
 
+/**
+* Explode and return the String to Array of string
+*/
 function convertStringtoArray(){
 	$stringtest = "Maurice,Robert,Denis,Patrick";
 	$result = array(explode(",", $stringtest));
@@ -47,6 +62,9 @@ function convertStringtoArray(){
 echo $result[1];
 }
 
+/**
+* Check which one of the specified numbers is the lowest
+*/
 function croissant($pieces){
 
 	$pieces = explode(", ",$pieces);
