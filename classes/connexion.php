@@ -1,4 +1,7 @@
 <?php
+	/**
+	* test functions to detect problems or confirm database linking
+	*/
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
