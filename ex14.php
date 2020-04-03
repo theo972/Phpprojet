@@ -14,11 +14,11 @@
 				<form method="POST" action="#">
 					<?php
 						require "classes/autoform.php";
-						require "classes/user.php";
+						require "classes/user.php";					 /** call of the autoform function and functions user and request */
 						require "classes/request.php";
 
-						$dbh = new request("root", "", "test", "mysql", "localhost");
-                		$list = $dbh->getCol("users", "ID, Name, First_Name");
+						$dbh = new request("root", "", "test", "mysql", "localhost");		  /** call of the query function that allows to connect to the database */
+                		$list = $dbh->getCol("users", "ID, Name, First_Name");					
 
 						$form = new autoform();
 						$result = new autoform();

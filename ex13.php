@@ -23,7 +23,7 @@
                     <th>Name</th>
                     <th>First Name</th>
                     <th>Birth Date</th>
-                    <th>Mail Adress</th>
+                    <th>Mail Adress</th>    <!--        creation of the table to display the users of the contact table of the database            -->
                     <th>Gender</th>
                     <th>Postal Adress</th>
                     <th>Register Datetime</th>
@@ -32,11 +32,11 @@
                 <?php
 
                 require "classes/autoform.php";
-				require "classes/user.php";
+				require "classes/user.php";                    /** call of the autoform function and functions user and request */
 				require "classes/request.php";
 
-                $dbh = new request("root", "", "test", "mysql", "localhost");
-                $dbh->getUserRows("users" , "Name, First_Name, Birth_Date, Mail_Adress, Gender, Postal_Adress, Sign_DateTime ");
+                $dbh = new request("root", "", "test", "mysql", "localhost");                               /** call of the query function that allows to connect to the database */
+                $dbh->getUserRows("users" , "Name, First_Name, Birth_Date, Mail_Adress, Gender, Postal_Adress, Sign_DateTime ");    /**  sends Sql queries based on the class to display an array  */
 
                 ?>
 
