@@ -1,5 +1,5 @@
 <?php
-require_once 'classes/functions_backlog.php';
+require_once 'classes/functions_backlog.php';                                   /** call of the autoform function and functions backlog*/
 require 'classes/autoform.php';
 ?>
 
@@ -29,8 +29,8 @@ require 'classes/autoform.php';
             <?php
 
 
-            $form = new autoform();
-            $form->getInputNumber("number", "Secondes à soustraire");
+            $form = new autoform();                                                                                         /** Initiation of the autoform class used to use a form   */
+            $form->getInputNumber("number", "Secondes à soustraire");                                                        /** Creating a number form and a validation button */
             $form->getInputSubmit("Valider");
 
         ?>
@@ -41,7 +41,7 @@ require 'classes/autoform.php';
 
 
 
-        if (!empty($_POST)){
+        if (!empty($_POST)){                                                /** creation of a condition allowing a predefined number to know what event will happen in second */
 
             dateModifier($_POST["number"]);
 

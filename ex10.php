@@ -1,7 +1,7 @@
 
 <?php
 
-require_once 'classes/functions_backlog.php';
+require_once 'classes/functions_backlog.php';                       /** call of the autoform function and functions backlog*/
 require 'classes/autoform.php';
 
 ?>
@@ -33,11 +33,11 @@ require 'classes/autoform.php';
 <?php
 
 
-	$form = new autoform();
-	$form->getInputMail("mail", "Mail");
+	$form = new autoform();                             /** Initiation of the autoform class used to use a form   */
+	$form->getInputMail("mail", "Mail");                /** Creating a mail form and a validation button */
 	$form->getInputSubmit("Valider");
 
-	$form->getInputDate("date", "Date");
+	$form->getInputDate("date", "Date");                /** Creating a date form and a validation button */
 	$form->getInputSubmit("Valider");
 
 
@@ -49,7 +49,7 @@ require 'classes/autoform.php';
 
 
 
-if (!empty($_POST)){
+if (!empty($_POST)){                                    /** Creation of a condition to check whether in a form the dates or address enter and valid */
 
 
 	controlMail($_POST["mail"]);

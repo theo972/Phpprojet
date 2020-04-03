@@ -22,11 +22,11 @@
 
             <form method="POST" action="#">
 					<?php
-						require "ex06/convertIntToRom.php";
+						require "ex06/convertIntToRom.php";         /** call of the convertIntToRom function */
 
-						$form = new convertIntToRom();
-						$form->getInputText("number","Number");
-	                    $form->getInputSubmit("submit","Submit");
+						$form = new convertIntToRom();               /** Initiation of the convertIntToRom class used to use a form   */
+						$form->getInputText("number","Number");             
+	                    $form->getInputSubmit("submit","Submit");               /** Creating a text form and a validation button */
 	                    echo "</br>";
 
                         if(!empty($_POST)){

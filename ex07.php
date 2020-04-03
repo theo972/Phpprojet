@@ -1,6 +1,6 @@
 <?php
 
-require_once 'classes/functions_backlog.php';
+require_once 'classes/functions_backlog.php';                                           /** call of the autoform function and functions backlog*/
 require 'classes/autoform.php';
 
 ?>
@@ -29,8 +29,8 @@ require 'classes/autoform.php';
             <?php
 
 
-                $form = new autoform();
-                $form->getInputNumber("number", "Fonction factorielle");
+                $form = new autoform();                                     /** Initiation of the autoform class used to use a form   */
+                $form->getInputNumber("number", "Fonction factorielle");        /** Creating a number form and a validation button */
                 $form->getInputSubmit("Valider");
 
 
@@ -44,7 +44,7 @@ require 'classes/autoform.php';
 
 
 
-            if (!empty($_POST)){
+            if (!empty($_POST)){                /** Creation of a condition to calculate the factor of a number */
 
                 
                 fact($_POST["number"]);

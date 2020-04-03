@@ -7,25 +7,25 @@
     <title>Projet php site vitrine</title>
 </head>
     <body>
-    	<header>
-            <nav>
-                <div class="menu">
-                    <p>
-                        <a href="index.php" class="cara">Retourner a la page d'accueil</a>
-                    </p>
-                </div>
-            </nav>
-        </header>
         <body>
-            <body>
-    
+            <header>
+                <nav>
+                    <div class="menu">
+                        <p>
+                            <a href="index.php" class="cara">Retourner a la page d'accueil</a>
+                        </p>
+                    </div>
+                </nav>
+            </header>
+    <body>
+
     <div id ="exo3">
     <form method="POST" action="#">
     <?php
         
-        require "classes/autoform.php";
-        $form = new autoform();
-        $form->getInputText("nombre1","Premier nombre");
+        require "classes/autoform.php";                                                              /** call of the autoform function */
+        $form = new autoform();                                                                     /**  Initiation of the autoform class used to use a form   */
+        $form->getInputText("nombre1","Premier nombre");                                            /** Creating a text form and a validation button */
         $form->getInputSubmit("submit","Submit");
 	    
     ?>
@@ -37,8 +37,8 @@
     $a = 2;
 
     if(!empty($_POST)){
-        echo $_POST["nombre1"];
-        
+        echo $_POST["nombre1"];                                     /**  creation of a condition to check whether a number and first  */
+                                                                    
 
         while($_POST["nombre1"] > $a % 2){
             if($_POST["nombre1"] % $a == 0){
@@ -54,14 +54,10 @@
     }
 
     ?>
+    
+    </body>
 
-
-
-
-
-
-            </body>
-    <section class="footer">
+<section class="footer">
     <a type="button" href="https://twitter.com/idcsurinternet" target="_blank">Twitter</a>
     <a type="button" href="https://www.facebook.com/anthony.pascal.5" target="_blank">Facebook</a>
     <a type="button" href="https://www.instagram.com/pnthonyaascal" target="_blank">Instagram</a>

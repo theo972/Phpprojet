@@ -26,31 +26,31 @@
 				<form method="POST" action="#">
 					<?php
 						require "classes/autoform.php";
-						require "classes/user.php";
+						require "classes/user.php";						/** call of the autoform function and request function and user function */
 						require "classes/request.php";
 
-						$form = new autoform();
-	                    $form->getInputText("name", "Name");
-	                    $form->getInputText("firstName","First Name");
-	                    $form->getInputDate("birthDate","BirthDate");
-	                    $form->getInputText("mail","Mail Adress");
-						$arr = array("M", "F");
+						$form = new autoform();							 /** Initiation of the autoform class used to use a form   */
+	                    $form->getInputText("name", "Name");			/** Creating a Text form a name*/
+	                    $form->getInputText("firstName","First Name");	/** Creating a Text form and a Frist name */
+	                    $form->getInputDate("birthDate","BirthDate");	/** Creating a Text form and a Birthdate */
+	                    $form->getInputText("mail","Mail Adress");		/** Creating a Text form and a Mail adress */
+						$arr = array("M", "F");							/** creation of an array that contains M/F to choose from a list */
 	                    $form->getInputTypeList("gender", $arr);
-	                    $form->getInputText("postalAdress","Postal Adress");
+	                    $form->getInputText("postalAdress","Postal Adress");	/** Creating a Text form and a Postal adress */
 	                    $form->getInputSubmit("submit","Submit");
 	                    echo "</br>";
                         if(!empty($_POST)){
 
-                        	$user = new user($_POST["name"], $_POST["firstName"], $_POST["birthDate"], $_POST["mail"], $_POST["gender"], $_POST["postalAdress"]);
+                        	$user = new user($_POST["name"], $_POST["firstName"], $_POST["birthDate"], $_POST["mail"], $_POST["gender"], $_POST["postalAdress"]);	/** creation of a user with the elements we put in the form */
                         	echo $user->getName() . " ";
                         	echo $user->getFirstName(). " ";
-                        	echo $user->getBirthDate(). " ";
+                        	echo $user->getBirthDate(). " ";			/**command to display user elements */
                         	echo $user->getMail(). " ";
                         	echo $user->getGender(). " ";
                         	echo $user->getPostalAdress(). " ";
 	                    	echo "<br>";
-	                    	$dbh = new request("root", "", "test", "mysql", "localhost");
-	                    	$dbh->setUser($user);
+	                    	$dbh = new request("root", "", "test", "mysql", "localhost");	/** connection to the Sql database */
+	                    	$dbh->setUser($user);				/** import user into database */
                     	}
 					?>
 				</form>

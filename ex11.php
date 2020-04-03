@@ -1,6 +1,6 @@
 <?php
 
-require_once 'classes/functions_backlog.php';
+require_once 'classes/functions_backlog.php';            /** call of the autoform function and functions backlog*/
 require 'classes/autoform.php';
 
 
@@ -40,9 +40,9 @@ require 'classes/autoform.php';
 <?php
 
 
-	$form = new autoform();
+	$form = new autoform();                                 /** Initiation of the autoform class used to use a form   */
 
-	$form->getInputText("list", "Liste de prénoms");
+	$form->getInputText("list", "Liste de prénoms");        /** Creating a Text form and a validation button */
 	$form->getInputSubmit("Valider");
 
 
@@ -54,7 +54,7 @@ require 'classes/autoform.php';
 
 
 
-if (!empty($_POST)){
+if (!empty($_POST)){                        /** Creation of a condition to sort a first name list in order of the second letter */
 	//dateModifier($_POST["number"]);
 	//fact($_POST["number"]);
 	//controlMail($_POST["mail"]);
