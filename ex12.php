@@ -49,7 +49,7 @@
                         	echo $user->getGender(). " ";
                         	echo $user->getPostalAdress(). " ";
 	                    	echo "<br>";
-	                    	$dbh = new request("root", "root", "contacts", "mysql", "localhost");
+	                    	$dbh = new request("root", "", "test", "mysql", "localhost");
 	                    	$dbh->setUser($user);
                     	}
 					?>

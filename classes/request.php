@@ -77,18 +77,52 @@ class request
 		}
 	}
 
-
-
-
-	public function setTrex($trex) {
-		$req = "INSERT INTO dinosaurs (name, type, length, health, damage, gender, size_arm, nbr_arm) VALUES ('" . $trex->getName() . "', 'T-Rex', " . $trex->getlength() . ", " . $trex->getHealth() . ", " . $trex->getDamage() . ", '" . $trex->getGender() . "', " . $trex->getSizeArms() . ", " . $trex->getNbrArms() . ")";
-		echo $req;
+	public function updateUser($user, $id) {
+		$req = "UPDATE users SET Name = '" . $user->getName() . "', First_Name = '" . $user->getFirstName() . "', Birth_Date = '" . $user->getBirthDate() . "', Mail_Adress = '" . $user->getMail() . "', Gender = '" . $user->getGender() . "'  WHERE ID = " . $id;
 		try {
-			$this->_bdd->query($req) === true;
+			$this->_bdd->exec($req);
 		} catch (PDOException $e) {
-			echo "Can't add the trex !";
+			echo "Can't update the user !";
 		}
 	}
+
+	public function getUserRows($table, $columns) {
+        $req = "SELECT " . $columns . " FROM " . $table;
+        echo $req;
+        $tab = $this->_bdd->query($req);
+        foreach ($tab as $row) {
+            print_r($row['Name'] . " " . $row['First_Name'] . " " . $row['Birth_Date'] . " " . $row['Mail_Adress'] . " " . $row["Gender"] . " " . $row["Postal_Adress"] . " " . $row['Sign_DateTime']);
+            echo "<br>";
+        }
+    }
+
+    public function getCol($table, $columns) {
+    	$list = array();
+    	$req = "SELECT " . $columns . " FROM " . $table;
+        $tab = $this->_bdd->query($req);
+
+        foreach ($tab as $row) {
+            array_push($list, $row['Name'] . " " . $row['First_Name']);
+        }
+        return $list;
+    }
+
+    public function getChoice($table, $name, $firstName) {
+    	$list = array();
+    	$req = "SELECT * FROM users WHERE Name = '" . $name . "' AND First_Name = '" . $firstName . "'";
+        $tab = $this->_bdd->query($req);
+
+        foreach ($tab as $row) {
+            array_push($list, $row['Name']);
+            array_push($list, $row['First_Name']);
+            array_push($list, $row['Birth_Date']);
+            array_push($list, $row['Mail_Adress']);
+            array_push($list, $row['Gender']);
+            array_push($list, $row['Postal_Adress']);
+            array_push($list, $row['ID']);
+        }
+        return $list;
+    }
 }
 
 ?>

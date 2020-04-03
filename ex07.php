@@ -1,7 +1,7 @@
 <?php
 
 require_once 'classes/functions_backlog.php';
-require 'classes/autoform_p.php';
+require 'classes/autoform.php';
 
 ?>
 <html lang="fr">
@@ -18,7 +18,7 @@ require 'classes/autoform_p.php';
                 <nav>
                 <div class="menu">
                         <p>
-                        <a href="index.php" class="cara">Retourner a la page d'accueil</a>
+                            <a href="index.php" class="cara">Retourner a la page d'accueil</a>
                         </p>
                     </div>
                 </nav>

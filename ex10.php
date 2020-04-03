@@ -2,7 +2,7 @@
 <?php
 
 require_once 'classes/functions_backlog.php';
-require 'classes/autoform_p.php';
+require 'classes/autoform.php';
 
 ?>
 

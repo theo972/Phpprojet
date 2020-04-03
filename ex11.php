@@ -1,7 +1,7 @@
 <?php
 
-require_once 'classes/functions_backlog_.php';
-require 'classes/autoform_PP.php';
+require_once 'classes/functions_backlog.php';
+require 'classes/autoform.php';
 
 
 ?>
@@ -55,7 +55,6 @@ require 'classes/autoform_PP.php';
 
 
 if (!empty($_POST)){
-
 	//dateModifier($_POST["number"]);
 	//fact($_POST["number"]);
 	//controlMail($_POST["mail"]);
