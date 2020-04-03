@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Projet php site vitrine</title>
+    <title>Convert number to Bin</title>
 </head>
     <body>
         <body>
@@ -19,7 +19,7 @@
             </header>
             <body>
 
-
+            <!-- form to enter an arabic number that gonna be converted as a binary one-->
             <form method="POST" action="#">
 					<?php
 						require "ex09/convertIntToBin.php";
@@ -29,6 +29,7 @@
 	                    $form->getInputSubmit("submit","Submit");
 	                    echo "</br>";
 
+                        //launches only if the number container isn't empty
                         if(!empty($_POST)){
                         	$form->checking($_POST["number"]);
                     	}

@@ -36,34 +36,31 @@ require 'classes/autoform.php';
             <body>
 
 
-<form method="POST" action="#">
-<?php
+            <form method="POST" action="#">
+            <?php
 
 
-	$form = new autoform();                                 /** Initiation of the autoform class used to use a form   */
+                $form = new autoform();                                 /** Initiation of the autoform class used to use a form   */
 
-	$form->getInputText("list", "Liste de prénoms");        /** Creating a Text form and a validation button */
-	$form->getInputSubmit("Valider");
-
-
-?>
-</form>
+                $form->getInputText("list", "Liste de prénoms");        /** Creating a Text form and a validation button */
+                $form->getInputSubmit("Valider");
 
 
-<?php
+            ?>
+            </form>
+
+            <?php
 
 
+                //launches only if the form isn't empty
+                if (!empty($_POST)){
 
-if (!empty($_POST)){                        /** Creation of a condition to sort a first name list in order of the second letter */
-	//dateModifier($_POST["number"]);
-	//fact($_POST["number"]);
-	//controlMail($_POST["mail"]);
-	//controlDate($_POST["date"]);
-	croissant($_POST["list"]);
-}
-
-?>
-
+                    if (!empty($_POST)){                        /** Creation of a condition to sort a first name list in order of the second letter */
+                    croissant($_POST["list"]);
+                    }
+                }
+            ?>
+            
 
 
             </body>
