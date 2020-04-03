@@ -35,7 +35,7 @@
 				require "classes/user.php";
 				require "classes/request.php";
 
-                $dbh = new request("root", "root", "contacts", "mysql", "localhost");
+                $dbh = new request("root", "", "test", "mysql", "localhost");
                 $dbh->getUserRows("users" , "Name, First_Name, Birth_Date, Mail_Adress, Gender, Postal_Adress, Sign_DateTime ");
 
                 ?>

@@ -7,16 +7,16 @@
     <title>Projet php site vitrine</title>
 </head>
     <body>
+    	<header>
+            <nav>
+                <div class="menu">
+                    <p>
+                        <a href="index.php" class="cara">Retourner a la page d'accueil</a>
+                    </p>
+                </div>
+            </nav>
+        </header>
         <body>
-            <header>
-                <nav>
-                    <div class="menu">
-                        <p>
-                            <a href="index.php" class="cara">Retourner a la page d'accueil</a>
-                        </p>
-                    </div>
-                </nav>
-            </header>
             <body>
     
     <div id ="exo3">

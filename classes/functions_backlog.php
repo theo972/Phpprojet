@@ -47,4 +47,24 @@ function convertStringtoArray(){
 echo $result[1];
 }
 
+function croissant($pieces){
+
+	$pieces = explode(", ",$pieces);
+
+    for ($i = 0; $i < count($pieces) ; $i++) {
+
+    	for ($j = 0; $j < count($pieces) ; $j++){
+
+    		if ($pieces[$i][1] < $pieces[$j][1]) {
+
+	        	$stock = $pieces[$i];
+	            $pieces[$i] = $pieces[$j];
+	            $pieces[$j] = $stock;
+        	}
+
+    	}
+    }
+    echo "Sort alphabetically, " . $pieces[0] . " is before " . $pieces[1] . " and this last is before " . $pieces[2] . ".";
+}
+
 ?>

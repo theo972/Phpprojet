@@ -40,12 +40,33 @@
 	        echo "</select>";
 	    }
 
-	    public function getUnputTypeList($name, $values) {
+	    public function getInputTypeList($name, $values) {
 	    	echo '<select name="' .$name.'"><br>';
 	    	foreach ($values AS $value) {
 	    		echo '<option value="' .$value. '">' .$value. '</option>';
 	    	}
 	    	echo "</select><br>";
+	    }
+
+	    public function setInputText($name, $label, $value) {
+			echo '<label for ="'.$name.'">'.$label.'</label></br>';
+			echo '<input type="text" id="'.$name.'" name="' .$name. '" value= "' . $value . '"><br>';
+		}
+
+		public function setInputTypeList($name, $label, $value, $arr) {
+	    	echo '<select name="' . $name .'"><br>';
+	    	echo '<option value="' . $value . '">"' . $value . '"</option>';
+	    	foreach ($arr AS $val) {
+	    		if (!($value == $val)) {
+	    			echo '<option value="' . $val . '">"' . $val . '"</option>';
+	    		}
+	    	}
+	    	echo "</select><br>";
+	    }
+
+	    public function setInputDate($name, $label, $value){
+	        echo '<label for="'.$label.'">'.$label.'</label><br>';
+	        echo '<input type="date" name="'.$name.'" value="' . $value . '"><br>';
 	    }
 	}
 ?>
