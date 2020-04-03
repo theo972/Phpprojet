@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Projet php site vitrine</title>
+    <title>Convert Number to Hex</title>
 </head>
     <body>
         <body>
@@ -18,6 +18,7 @@
                 </nav>
             </header>
             <body>
+            <!-- form to enter an arabic number that gonna be converted as Hexadecimal number-->
             <form method="POST" action="#">
 					<?php
 						require "ex08/convertIntToHex.php";
@@ -27,6 +28,7 @@
 	                    $form->getInputSubmit("submit","Submit");
 	                    echo "</br>";
 
+                        //launches only if the number container isn't empty
                         if(!empty($_POST)){
                         	$form->checking($_POST["number"]);
                     	}

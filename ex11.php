@@ -36,33 +36,30 @@ require 'classes/autoform.php';
             <body>
 
 
-<form method="POST" action="#">
-<?php
+            <form method="POST" action="#">
+            <?php
 
 
-	$form = new autoform();
+            	$form = new autoform();
 
-	$form->getInputText("list", "Liste de prénoms");
-	$form->getInputSubmit("Valider");
-
-
-?>
-</form>
+            	$form->getInputText("list", "Liste de prénoms");
+            	$form->getInputSubmit("Valider");
 
 
-<?php
+            ?>
+            </form>
 
 
+            <?php
 
-if (!empty($_POST)){
-	//dateModifier($_POST["number"]);
-	//fact($_POST["number"]);
-	//controlMail($_POST["mail"]);
-	//controlDate($_POST["date"]);
-	croissant($_POST["list"]);
-}
 
-?>
+            //launches only if the form isn't empty
+            if (!empty($_POST)){
+
+            	croissant($_POST["list"]);
+            }
+
+            ?>
 
 
 

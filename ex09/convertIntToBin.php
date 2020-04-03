@@ -1,19 +1,29 @@
 <?php
 	class ConvertIntToBin {
 		private $_res;
-		private $_digit;
 
+		/**
+		* Construct method for the class
+		* @res -> the String result of calculations
+		*/
 		public function __construct() {
 			$this->_res = "";
-			$this->_digit = 0;
-			$this->_nbDig = 0;
 		}
 
+		/**
+		* Should be replaced by autoform.php->getInputText()
+		* displays the content of a text imput + label
+		*/
 		public function getInputText($name, $label) {
 					echo '<label for ="'.$name.'">'.$label.'</label></br>';
 					echo '<input type="text" id="'.$name.'" name="' .$name.'"><br>';
 				}
 
+		/**
+		* Research the digit to check into the number
+		* The result is calculated while the number > 0
+		* Once done, the result is displayed
+		*/
 		public function checking($number) {
 			echo "Nombre entré : " . $number . ".<br>";
 
@@ -30,6 +40,10 @@
 			echo "Résultat : " . $this->_res;
 		}
 
+		/**
+		* Once click, launch the submit of the number
+		* Displays the button to validate
+		*/
 		public function getInputSubmit($label) {	
 			echo '<input type="submit" value"'.$label.'"><br>';
 		}

@@ -3,17 +3,31 @@
 		private $_res;
 		private $_digit;
 
+		/**
+		* Construct method for the class
+		* @res -> the String result of calculations
+		* @digit -> The value of the selected digit
+		* @nbDig -> the count of digit on a number
+		*/
 		public function __construct() {
 			$this->_res = "";
 			$this->_digit = 0;
 			$this->_nbDig = 0;
 		}
 
+		/**
+		* Should be replaced by autoform.php->getInputText()
+		* displays the content of a text imput + label
+		*/
 		public function getInputText($name, $label) {
 					echo '<label for ="'.$name.'">'.$label.'</label></br>';
 					echo '<input type="text" id="'.$name.'" name="' .$name.'"><br>';
 				}
 
+		/**
+		* Research the digit to check into the number
+		* Add the result to the previous result by reversed concatenation
+		*/
 		public function checking($number) {
 			echo "Nombre entré : " . $number . ".<br>";
 
@@ -42,6 +56,10 @@
 			echo "Résultat : " . $this->_res;
 		}
 
+		/**
+		* Research the digit to check into the number
+		* Add the result to the previous result by reversed concatenation
+		*/
 		public function checkMil($number) {
 			if ($number == 4 || $number == 9) {
 				if ($number == 4) {
@@ -69,6 +87,10 @@
 			}
 		}
 
+		/**
+		* Research the digit to check into the number
+		* Add the result to the previous result by reversed concatenation
+		*/
 		public function checkCent($number) {
 			if ($number == 4 || $number == 9) {
 				if ($number == 4) {
@@ -96,6 +118,10 @@
 			}
 		}
 
+		/**
+		* Research the digit to check into the number
+		* Add the result to the previous result by reversed concatenation
+		*/
 		public function checkDec($number) {
 			if ($number == 4 || $number == 9) {
 				if ($number == 4) {
@@ -123,6 +149,10 @@
 			}
 		}
 
+		/**
+		* Research the digit to check into the number
+		* Add the result to the previous result by concatenation
+		*/
 		public function checkUnit($number) {
 			if ($number == 4 || $number == 9) {
 				$this->_res = $this->_res . "I";
@@ -150,6 +180,11 @@
 			}
 		}
 
+
+		/**
+		* Once click, launch the submit of the number
+		* Displays the button to validate
+		*/
 		public function getInputSubmit($label) {	
 			echo '<input type="submit" value"'.$label.'"><br>';
 		}
